@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apenas uma pequena landing page como testes!">
+    <title>Ritz - Primeira landing page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+   <script src="javascript.js"></script>
+   <link rel="shortcut icon" type="imagex/png" href="peixeburro.png">''
+    
+
+</head>
+
+
+<body>
+    
+
+    <header class="cabecalho">
+        <div>
+            
+            <a href="https://matias.ma/nsfw/#_=">   <img class ="imagem-cabecalho" src="R.png" alt="Logo Ballerini"></a> 
+           
+        </div>
+       
+        <nav class="menu-nav">
+            <a href= "https://www.instagram.com/joao_ritzz/" class="ancora1">Instagram</a>
+            <a href="https://wa.me/5514988008368" class="ancora1">WhatsApp</a>
+            <a href="SourceCode.html" download class="ancora1">Source Code</a>  
+            <a href="https://mail.google.com/mail/u/1/#inbox"class="ancora1">Gmail</a> 
+            
+        </nav>
+    </header>
+
+    
+
+
+    <main class="conteudo">
+
+        <div class="relogio"id="clock">8:10:45</div>
+        
+        <section class="conteudo-principal">    
+            
+          <div class="conteudo-principal-escrito">
+            <h1 class="conteudo-principal-escrito-titulo">João Ritz</h1>
+            <h2 class="conteudo-principal-escrito-subtitulo">João Victor Ritz Shimamura de Carvalho, 17 anos, Bauru - SP </h2>
+            
+            <form action="https://www.linkedin.com/in/joão-victor-ritz-shimamura-de-carvalho-294b33216/">   
+            <button class="conteudo-principal-escrito-botao">Linkedin!</button>
+            </form>   
+          
+        </div>
+          
+          <img class="conteudo-principal-imagem"src="eu.jpg" alt="Imagem da Balle Bot">
+        </section>
+        
+        <section class="conteudo2">
+        <h3 class="conteudo2-titulo">Resumo de experiências profissionais:</h3>
+        <p class="conteudo2-paragrafo"><strong>1. Assistente 3D (Archviz), Comercial (Nominal 3D & Carvatolle)</strong></p>
+        <p class="conteudo2-paragrafo"><strong>2. 3° Etim Adm - ETEC RODRIGUES DE ABREU, Desenvolvimento Web & Mobile SENAI</strong></p>
+        <p class="conteudo2-paragrafo"><strong>3. Inglês Básico, Programação e impressão 3D, Html, Css, Javascript</strong></p>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+    <img class="rodape-imagem"src="yin.png" alt="rodapé balle">
+    </footer>
+
+    
+
+
+</body>
+
+
+</html>
+
+
+setInterval(showTime, 1000);
+function showTime() {
+    let time = new Date();
+    let hour = time.getHours();
+    let min = time.getMinutes();
+    let sec = time.getSeconds();
+    am_pm = " Am";
+
+    if (hour > 12) {
+        hour -= 12;
+        am_pm = " Pm";
+    }
+    if (hour == 0) {
+        hr = 12;
+        am_pm = " Am";
+    }
+
+    hour = hour < 10 ? "0" + hour : hour;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
+
+    let currentTime = hour + ":" 
+        + min + ":" + sec + am_pm;
+
+    document.getElementById("clock")
+        .innerHTML = currentTime;
+}
+
+showTime();
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.apagar{
+    opacity: 100%;
+    background-color: #380303;
+    border-radius: 50%;
+}
+
+body{
+    font-size: 100%;
+    background: linear-gradient(68.15deg, #000000 16.62%, #700505 85.61%);
+}
+
+
+.relogio {
+    font-size: 25px;
+    color: white;
+    margin-top: 18px;
+    margin-left:885px;
+    font-family: font-family 'Oleo Script', cursive;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.imagem-cabecalho {
+    height: 72px;
+    border-radius: 0%;
+}
+
+.menu-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.ancora1 {
+    font-family: 'Sarala';
+    color: #FFF2E7;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.conteudo {
+    border-top: 0.4px solid #FFF2E7;
+    margin-bottom: 48px;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+}
+
+.conteudo-principal-escrito-titulo{
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 64px;
+    color: #FFF2E7;
+    
+}
+
+.conteudo-principal-escrito-subtitulo{
+
+font-family: sarala;
+font-weight: 400;
+font-size: 24px;
+color:#ECD6C4;
+}
+
+.conteudo-principal-escrito-botao {
+    background-color: #ECD6C4;
+    width: 180px;
+    height:60px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba (0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: Sarala;
+    font-weight: 400;
+    font-size: 24px;
+    color: #2F2325;
+}
+
+.conteudo-principal-escrito-botao:hover {
+    background-color: rgba(236, 214, 196, 0.53);
+  }
+
+.conteudo-principal-imagem {
+    height: 650px;
+    padding: 60px;
+    border-radius:70%;
+}
+
+
+
+.conteudo2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.conteudo2-titulo {
+    border-top: 0.4px solid #FFF2E7;
+    padding-top: 48px;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFF2EF;
+    margin-bottom: 16px;
+}
+
+.conteudo2-paragrafo {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #ECD6C4;
+}
+
+
+
+.rodape {
+    padding: 32px;
+    border-top: 0.4px solid #FFF2E7;
+    
+}
+
+.rodape-imagem {
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+}
